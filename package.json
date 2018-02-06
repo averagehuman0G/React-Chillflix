@@ -7,14 +7,21 @@
   "author": "Jonathan Vargas <jonathanv3232@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "format":
-      "node_modules/prettier/bin-prettier.js --write --single-quote --tab-width=2 --print-width=80 --parser=flow \"js/**/*.{js,jsx}\" "
+    "lint": "node_modules/eslint/bin/eslint.js **/*.{js,jsx}",
+    "format": "node_modules/prettier/bin-prettier.js --write --single-quote --tab-width=2 --print-width=80 --parser=flow \"js/**/*.{js,jsx}\" "
   },
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.6.1",
     "prettier": "^1.10.2"
   }
 }
