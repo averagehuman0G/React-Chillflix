@@ -1,2 +1,3 @@
-# React-Chillflix
+# Chillflix
+
 A clone of Netflix built with React

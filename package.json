@@ -6,8 +6,15 @@
   "repository": "git@github.com:jonathanv3232/React-Chillflix.git",
   "author": "Jonathan Vargas <jonathanv3232@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "format":
+      "node_modules/prettier/bin-prettier.js --write --single-quote --tab-width=2 --print-width=80 --parser=flow \"js/**/*.{js,jsx}\" "
+  },
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.10.2"
   }
 }
