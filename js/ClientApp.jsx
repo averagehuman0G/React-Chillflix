@@ -1,14 +1,18 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Landing from './Landing';
 import ViewAll from './ViewAll';
+import FourOhFour from './FourOhFour';
 
 const App = () => (
   <BrowserRouter>
     <div className="app">
-      <Route exact path="/" component={Landing} />
-      <Route path="/search" component={ViewAll} />
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route path="/search" component={ViewAll} />
+        <Route component={FourOhFour} />
+      </Switch>
     </div>
   </BrowserRouter>
 );
