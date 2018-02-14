@@ -11,16 +11,12 @@ const Wrapper = styled.div`
 `;
 
 class ViewAll extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      searchTerm: 'Debugging',
-    };
-    this.handleSearchTermChange = this.handleSearchTermChange.bind(this);
-  }
-  handleSearchTermChange(event) {
+  state = {
+    searchTerm: '',
+  };
+  handleSearchTermChange = event => {
     this.setState({ searchTerm: event.target.value });
-  }
+  };
   render() {
     return (
       <div>
