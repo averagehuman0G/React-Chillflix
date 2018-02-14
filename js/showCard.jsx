@@ -4,14 +4,13 @@ import styled from 'styled-components';
 const ShowCardWrapper = styled.div`
   flex: 1;
   justify-content: space-around;
-  width: 25%;
+  flex-basis: 25%;
   height: 500px;
   border: 1px solid black;
-  margin: 5% 5%;
+  margin: 2% 2%;
 `;
 const Img = styled.img`
-  max-width: 200px;
-  max-height: 300px;
+  width: 40%;
 `;
 const ShowCard = props => (
   <ShowCardWrapper>
