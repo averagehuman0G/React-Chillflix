@@ -29,7 +29,13 @@ class ViewAll extends React.Component {
             placeholder="search"
           />
         </header>
-        <Wrapper>{data.shows.map(show => <ShowCard {...show} key={show.imdbID} />)}</Wrapper>
+        <Wrapper>
+          {data.shows
+            .filter(show =>
+              `${show.title} ${show.description}`.toLowerCase().includes(this.state.searchTerm.toLowerCase())
+            )
+            .map(show => <ShowCard {...show} key={show.imdbID} />)}
+        </Wrapper>
       </div>
     );
   }
