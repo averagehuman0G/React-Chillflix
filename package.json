@@ -7,12 +7,17 @@
   "author": "Jonathan Vargas <jonathanv3232@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "test": "jest",
     "dev": "node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "watch": "node_modules/webpack/bin/webpack.js --watch",
     "build": "node_modules/webpack/bin/webpack.js",
     "lint": "node_modules/eslint/bin/eslint.js **/*.{js,jsx}",
-    "format":
-      "node_modules/prettier/bin-prettier.js --write --single-quote --tab-width=2 --print-width=80 --parser=flow \"js/**/*.{js,jsx}\" "
+    "format": "node_modules/prettier/bin-prettier.js --write --single-quote --tab-width=2 --print-width=80 --parser=flow \"js/**/*.{js,jsx}\" "
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "dependencies": {
     "react": "^16.2.0",
@@ -25,8 +30,12 @@
     "babel-eslint": "^8.2.1",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.3",
     "eslint": "^4.17.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -35,7 +44,9 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.6.1",
+    "jest": "^22.4.3",
     "prettier": "^1.10.2",
+    "react-test-renderer": "^16.2.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
   }
