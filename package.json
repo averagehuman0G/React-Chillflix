@@ -14,15 +14,17 @@
     "watch": "node_modules/webpack/bin/webpack.js --watch",
     "build": "node_modules/webpack/bin/webpack.js",
     "lint": "node_modules/eslint/bin/eslint.js **/*.{js,jsx}",
-    "format":
-      "node_modules/prettier/bin-prettier.js --write --single-quote --tab-width=2 --print-width=80 --parser=flow \"js/**/*.{js,jsx}\" "
+    "format": "node_modules/prettier/bin-prettier.js --write --single-quote --tab-width=2 --print-width=80 --parser=flow \"js/**/*.{js,jsx}\" "
   },
   "jest": {
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-hot-loader": "^4.0.0",
     "react-router-dom": "^4.2.2",
     "styled-components": "^3.1.6"
   },

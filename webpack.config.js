@@ -1,12 +1,14 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   context: __dirname,
-  entry: './js/ClientApp.jsx',
+  entry: ['./js/App.jsx'],
   devtool: 'cheap-eval-source-map',
   devServer: {
     publicPath: '/public/',
     historyApiFallback: true,
+    hot: true,
   },
   output: {
     path: path.join(__dirname, 'public'),
@@ -20,6 +22,7 @@ module.exports = {
     reasons: true,
     chunks: true,
   },
+  plugins: [new webpack.NamedModulesPlugin(), new webpack.HotModuleReplacementPlugin()],
   module: {
     rules: [
       {
