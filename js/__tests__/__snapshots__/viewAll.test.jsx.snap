@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ViewAll renders correctly 1`] = `
+exports[`Search Should render correctly 1`] = `
 <div>
   <header>
     <Logo />
