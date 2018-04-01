@@ -15,8 +15,6 @@ describe('Search', () => {
 
   it('Should render the correct number of shows', () => {
     const component = shallow(<ViewAll />);
-
-    // console.log(component);
     expect(component.find(ShowCard).length).toEqual(data.shows.length);
   });
 
