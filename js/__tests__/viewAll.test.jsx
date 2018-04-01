@@ -19,4 +19,15 @@ describe('Search', () => {
     // console.log(component);
     expect(component.find(ShowCard).length).toEqual(data.shows.length);
   });
+
+  it('Should render the right number of shows based on the search term', () => {
+    const searchTerm = 'Game';
+    const component = shallow(<ViewAll />);
+    component.find('input').simulate('change', { target: { value: searchTerm } });
+    const showsRendering = data.shows.filter(show =>
+      `${show.title} ${show.description}`.toLowerCase().includes(searchTerm.toLowerCase())
+    ).length;
+
+    expect(component.find(ShowCard).length).toEqual(showsRendering);
+  });
 });
