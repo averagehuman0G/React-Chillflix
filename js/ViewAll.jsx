@@ -14,7 +14,7 @@ class ViewAll extends React.Component {
   state = {
     searchTerm: '',
   };
-  handleSearchTermChange = event => {
+  handleSearchTermChange = (event: SyntheticKeyboardEvent) => {
     this.setState({ searchTerm: event.target.value });
   };
   render() {
