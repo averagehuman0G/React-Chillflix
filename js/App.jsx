@@ -1,3 +1,4 @@
+// @flow
 import { hot } from 'react-hot-loader';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import React from 'react';
