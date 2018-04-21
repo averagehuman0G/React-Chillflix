@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import styled from 'styled-components';
 import ShowCard from './showCard';
@@ -10,12 +11,12 @@ const Wrapper = styled.div`
   margin: 2% 5%;
 `;
 
-class ViewAll extends React.Component {
+class ViewAll extends React.Component<{}, {searchTerm: string}> {
   state = {
     searchTerm: '',
   };
-  handleSearchTermChange = (event: SyntheticKeyboardEvent) => {
-    this.setState({ searchTerm: event.target.value });
+  handleSearchTermChange = (event: SyntheticKeyboardEvent<HTMLInputElement>) => {
+    this.setState({ searchTerm: event.currentTarget.value });
   };
   render() {
     return (

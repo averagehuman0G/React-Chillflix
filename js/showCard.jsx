@@ -1,3 +1,5 @@
+//@flow
+
 import React from 'react';
 import styled from 'styled-components';
 
@@ -12,7 +14,12 @@ const ShowCardWrapper = styled.div`
 const Img = styled.img`
   width: 40%;
 `;
-const ShowCard = props => (
+const ShowCard = (props: {
+  poster: string,
+  title: string,
+  year: string,
+  description: string,
+}) => (
   <ShowCardWrapper>
     <Img alt={`${props.title} Show Poster`} src={`/public/img/posters/${props.poster}`} />
     <div>
